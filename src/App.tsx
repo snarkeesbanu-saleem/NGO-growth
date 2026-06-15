@@ -239,11 +239,20 @@ export default function App() {
           </div>
         )}
 
-        {/* Dynamic warning system (hidden in print) */}
+        {/* Dynamic engine mode status banner (hidden in print) */}
         {errorMessage && (
-          <div className="bg-amber-50 border border-amber-200 text-amber-800 p-4 rounded-xl flex items-start gap-3 text-xs no-print animate-fade-in">
-            <Info className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-            <p>{errorMessage}</p>
+          <div className="bg-slate-900 border border-slate-800 text-slate-200 px-5 py-3.5 rounded-2xl flex items-center justify-between gap-3.5 text-xs no-print animate-fade-in shadow-lg shadow-slate-950/5">
+            <div className="flex items-center gap-2.5">
+              <div className="p-1 bg-emerald-500/10 rounded-lg text-emerald-400">
+                <Sparkles className="w-4 h-4 animate-pulse" />
+              </div>
+              <p className="font-medium tracking-tight whitespace-normal md:whitespace-nowrap">
+                {errorMessage}
+              </p>
+            </div>
+            <div className="hidden md:flex items-center gap-1.5 text-3xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">
+              Optimal Performance Mode
+            </div>
           </div>
         )}
 
