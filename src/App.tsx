@@ -8,14 +8,12 @@ import {
   Building2, 
   Sparkles, 
   FileText, 
-  Share2, 
   CheckCircle2, 
   Check, 
   Printer, 
   Copy, 
   RotateCcw, 
   ArrowRight, 
-  ExternalLink,
   Info,
   Layers,
   Heart,
@@ -34,7 +32,6 @@ export default function App() {
   const [isGeneratingDocument, setIsGeneratingDocument] = useState(false);
   const [activeTab, setActiveTab] = useState<'all' | 'outreach' | 'volunteer' | 'fundraising' | 'branding'>('all');
   const [copiedNoteId, setCopiedNoteId] = useState<string | null>(null);
-  const [copiedShareText, setCopiedShareText] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   // Auto-fill some note placeholders when IDs are selected
@@ -167,24 +164,6 @@ export default function App() {
     navigator.clipboard.writeText(report);
     setCopiedNoteId("main-report");
     setTimeout(() => setCopiedNoteId(null), 2500);
-  };
-
-  // Structured LinkedIn message template to fulfill task instruction
-  const shareText = `🚀 Honored to scale our community impact strategies! We just performed a complete program audit to bolster outreach, engagement, and sustainable models for our organization on our path to drive generational change.
-
-Our 5 high-impact strategic pivots:
-${selectedRecommendations.map((r, i) => `${i + 1}. ${r.title}`).join('\n')}
-
-We've finalized our development plan, saved the master document securely, and are moving forward to achieve these critical objectives! Highly recommend exploring analytical reviews to empower local social initiatives.
-
-Tagging InAmigos Foundation as our development catalyst! 🌟
-
-#InAmigosFoundation #SocialImpact #NonprofitGrowth #CapacityBuilding #StrategicOutreach #Volunteering #NGO`;
-
-  const copyShareTextToClipboard = () => {
-    navigator.clipboard.writeText(shareText);
-    setCopiedShareText(true);
-    setTimeout(() => setCopiedShareText(false), 2000);
   };
 
   // Filtering logic
@@ -596,67 +575,6 @@ Tagging InAmigos Foundation as our development catalyst! 🌟
                     )}
 
                   </div>
-                </div>
-              </div>
-
-              {/* LinkedIn & Social Media Outreach Helper Panel */}
-              <div id="social-media-sharing-panel" className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm space-y-4">
-                <div className="flex items-center gap-2">
-                  <Share2 className="w-5 h-5 text-emerald-600" />
-                  <h4 className="font-display font-bold text-slate-800 text-sm">Professional Task Sharing Aid</h4>
-                </div>
-                
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  The task requires sharing your findings on LinkedIn or social media, tagging <strong>InAmigos Foundation</strong>. Click below to copy a pre-formatted message highlighting your 5 strategic pivots!
-                </p>
-
-                <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-100">
-                  <p className="text-2xs text-slate-600 line-clamp-4 leading-relaxed font-mono whitespace-pre-line">
-                    {shareText}
-                  </p>
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-2">
-                  <button
-                    id="btn-copy-social-text"
-                    type="button"
-                    onClick={copyShareTextToClipboard}
-                    disabled={selectedIds.length < 5}
-                    className={`flex-1 py-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
-                      copiedShareText 
-                        ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
-                        : 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm'
-                    } disabled:opacity-50 disabled:cursor-not-allowed`}
-                  >
-                    {copiedShareText ? (
-                      <>
-                        <Check className="w-3.5 h-3.5" />
-                        LinkedIn Copy Success!
-                      </>
-                    ) : (
-                      <>
-                        <Copy className="w-3.5 h-3.5" />
-                        Copy Professional LinkedIn Post
-                      </>
-                    )}
-                  </button>
-
-                  <a
-                    href="https://www.linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-xl text-center flex items-center justify-center gap-1 transition-all"
-                  >
-                    LinkedIn Portal
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-
-                <div className="bg-amber-50/50 p-3 rounded-lg border border-amber-100 text-5xs text-slate-500 space-y-1">
-                  <span className="font-bold text-amber-700 block uppercase tracking-wide">Next steps to complete submission:</span>
-                  <p>1. Copy the formatted report text (using the button top-right of the preview sheet) or print to PDF.</p>
-                  <p>2. Upload that PDF file to your local Google Drive directory.</p>
-                  <p>3. Share on LinkedIn using the copied post content and attach the PDF link. Don't forget to take a screenshot!</p>
                 </div>
               </div>
 
