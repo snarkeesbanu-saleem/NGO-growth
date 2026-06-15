@@ -1,0 +1,6 @@
+{
+  "name": "NGO Growth Action Planner",
+  "description": "An interactive, intelligence-powered platform for social organizations to analyze practices, obtain targeted growth strategies, customize growth recommendations, and export professional growth plans.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
