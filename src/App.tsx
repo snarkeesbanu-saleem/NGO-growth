@@ -90,7 +90,7 @@ export default function App() {
       }
     } catch (err: any) {
       console.error('Failed to query strategies from server:', err);
-      setErrorMessage('Using local high-impact curated strategy engine. Personalized instantly for serverless environments (like Vercel).');
+      setErrorMessage(null);
       
       // Generate client-side recommendations instantly
       const adapted = getClientFallbackRecommendations(submittedProfile);
