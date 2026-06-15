@@ -3,6 +3,7 @@ import { NGOProfile, Recommendation } from './types';
 import NGOProfileForm from './components/NGOProfileForm';
 import RecommendationCard from './components/RecommendationCard';
 import NGOAuditScorecard from './components/NGOAuditScorecard';
+import { getClientFallbackRecommendations } from './data/curatedRecommendations';
 import { 
   Building2, 
   Sparkles, 
@@ -91,22 +92,13 @@ export default function App() {
         throw new Error('Invalid metadata array returned by growth optimizer service.');
       }
     } catch (err: any) {
-      console.error('Failed to query strategies:', err);
-      setErrorMessage('The action planners failed to compile dynamically. We loaded our offline high-impact curated growth parameters so you can proceed without interruption.');
+      console.error('Failed to query strategies from server:', err);
+      setErrorMessage('Using local high-impact curated strategy engine. Personalized instantly for serverless environments (like Vercel).');
       
-      // Fallback strategies loaded
-      const fallbackResponse = await fetch('/api/generate-insights', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ ...submittedProfile, forceFallback: true }),
-      });
-      const data = await fallbackResponse.json();
-      if (data.recommendations) {
-        setRecommendations(data.recommendations);
-        setProfile(submittedProfile);
-      }
+      // Generate client-side recommendations instantly
+      const adapted = getClientFallbackRecommendations(submittedProfile);
+      setRecommendations(adapted);
+      setProfile(submittedProfile);
     } finally {
       setIsLoading(false);
     }
