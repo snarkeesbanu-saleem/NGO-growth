@@ -177,13 +177,13 @@ export default function App() {
       <header className="bg-white border-b border-slate-100 py-5 px-6 sticky top-0 z-40 no-print shadow-sm">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-600 rounded-xl text-white shadow-md shadow-emerald-600/10">
+            <div className="p-2 bg-indigo-600 rounded-xl text-white shadow-md shadow-indigo-600/10">
               <TrendingUp className="w-6 h-6" />
             </div>
             <div>
               <h1 className="font-display font-bold text-slate-800 text-lg md:text-xl tracking-tight flex items-center gap-2">
                 NGO Growth Action Planner
-                <span className="text-3xs font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">
+                <span className="text-3xs font-semibold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-100">
                   Interactive Strategy Suite
                 </span>
               </h1>
@@ -195,8 +195,8 @@ export default function App() {
           
           <div className="flex items-center gap-2">
             <span className="text-xs text-slate-400 font-medium">Status:</span>
-            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-semibold">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold">
+              <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
               Development Active
             </div>
           </div>
@@ -207,14 +207,14 @@ export default function App() {
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 lg:p-8 space-y-8">
         {/* Intro Card (hidden in print) */}
         {!profile && (
-          <div className="bg-gradient-to-br from-emerald-900 to-slate-900 text-white rounded-3xl p-6 md:p-10 shadow-xl relative overflow-hidden no-print animate-fade-in">
+          <div className="bg-gradient-to-br from-indigo-950 to-slate-900 text-white rounded-3xl p-6 md:p-10 shadow-xl relative overflow-hidden no-print animate-fade-in">
             {/* Background elements */}
-            <div className="absolute -right-12 -bottom-12 w-64 h-64 bg-emerald-500/10 rounded-full blur-2xl"></div>
-            <div className="absolute left-1/4 top-1/10 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
+            <div className="absolute -right-12 -bottom-12 w-64 h-64 bg-indigo-500/10 rounded-full blur-2xl"></div>
+            <div className="absolute left-1/4 top-1/10 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl"></div>
             
             <div className="max-w-3xl relative z-10 space-y-4">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-xs font-semibold text-emerald-300 border border-white/5">
-                <Heart className="w-3.5 h-3.5 fill-emerald-400 text-emerald-400 animate-pulse" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-xs font-semibold text-indigo-300 border border-white/5">
+                <Heart className="w-3.5 h-3.5 fill-indigo-400 text-indigo-400 animate-pulse" />
                 Empowering Social Visionaries
               </div>
               <h1 className="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-white leading-tight">
@@ -224,7 +224,7 @@ export default function App() {
                 Unlock 5 high-impact, tailored strategies designed for your organization's specific resource capabilities. Plan core actions, download a print-ready executive strategic report, and secure verified practices to strengthen community relationships.
               </p>
               
-              <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-4 text-emerald-100 text-xs font-medium">
+              <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-4 text-indigo-100 text-xs font-medium">
                 <div className="flex items-center gap-2 bg-white/5 py-2 px-3 rounded-xl border border-white/5">
                   <span className="text-base">🚀</span> Outreach & Public Branding
                 </div>
@@ -243,14 +243,14 @@ export default function App() {
         {errorMessage && (
           <div className="bg-slate-900 border border-slate-800 text-slate-200 px-5 py-3.5 rounded-2xl flex items-center justify-between gap-3.5 text-xs no-print animate-fade-in shadow-lg shadow-slate-950/5">
             <div className="flex items-center gap-2.5">
-              <div className="p-1 bg-emerald-500/10 rounded-lg text-emerald-400">
+              <div className="p-1 bg-indigo-500/10 rounded-lg text-indigo-400">
                 <Sparkles className="w-4 h-4 animate-pulse" />
               </div>
               <p className="font-medium tracking-tight whitespace-normal md:whitespace-nowrap">
                 {errorMessage}
               </p>
             </div>
-            <div className="hidden md:flex items-center gap-1.5 text-3xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">
+            <div className="hidden md:flex items-center gap-1.5 text-3xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 uppercase tracking-wider">
               Optimal Performance Mode
             </div>
           </div>
@@ -263,7 +263,7 @@ export default function App() {
           ) : (
             <div className="bg-white border border-slate-100 rounded-2xl p-5 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-5 animate-fade-in">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-emerald-50 rounded-xl border border-emerald-100 flex items-center justify-center text-emerald-600 font-display font-bold text-lg select-none shadow-inner">
+                <div className="w-12 h-12 bg-indigo-50 rounded-xl border border-indigo-100 flex items-center justify-center text-indigo-600 font-display font-bold text-lg select-none shadow-inner">
                   {profile.name.charAt(0).toUpperCase()}
                 </div>
                 <div>
@@ -306,18 +306,18 @@ export default function App() {
               <div className="bg-white rounded-2xl border border-slate-100 p-4 shadow-sm">
                 <div className="flex items-center justify-between mb-3.5 flex-wrap gap-2">
                   <h3 id="recommendations-header" className="text-sm font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
-                    <Layers className="w-4 h-4 text-emerald-600" />
+                    <Layers className="w-4 h-4 text-indigo-600" />
                     Strategic Alternatives Directory
                   </h3>
                   
                   {/* Select status */}
                   <span id="selected-counter-badge" className={`text-xs px-2.5 py-1 rounded-lg font-bold flex items-center gap-1 transition-all ${
                     selectedIds.length === 5 
-                      ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
+                      ? 'bg-indigo-50 text-indigo-700 border border-indigo-200' 
                       : 'bg-amber-50 text-amber-700 border border-amber-200 animate-pulse'
                   }`}>
                     {selectedIds.length === 5 ? (
-                      <CheckCircle2 className="w-3.5 h-3.5 fill-emerald-600 text-white" />
+                      <CheckCircle2 className="w-3.5 h-3.5 fill-indigo-600 text-white" />
                     ) : (
                       <span className="w-2 h-2 rounded-full bg-amber-500"></span>
                     )}
@@ -358,7 +358,7 @@ export default function App() {
                     onClick={() => setActiveTab('volunteer')}
                     className={`text-xs px-3.5 py-2 rounded-lg font-semibold transition-all whitespace-nowrap cursor-pointer ${
                       activeTab === 'volunteer'
-                        ? 'bg-emerald-600 text-white shadow-sm'
+                        ? 'bg-violet-600 text-white shadow-sm'
                         : 'text-slate-600 hover:bg-slate-50'
                     }`}
                   >
@@ -415,24 +415,24 @@ export default function App() {
             <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-24">
               
               {/* Highlight helper block */}
-              <div className="bg-emerald-800 text-white rounded-2xl p-5 shadow-sm space-y-3.5">
+              <div className="bg-indigo-900 text-white rounded-2xl p-5 shadow-sm space-y-3.5">
                 <div className="flex items-center gap-2">
-                  <FileText className="w-5 h-5 text-emerald-300" />
+                  <FileText className="w-5 h-5 text-indigo-300" />
                   <h4 className="font-display font-bold text-sm">Compiled Growth Document Preview</h4>
                 </div>
-                <p className="text-xs text-emerald-100/90 leading-relaxed">
+                <p className="text-xs text-indigo-100/90 leading-relaxed">
                   Below is the real-time visual rendered preview of your strategic document. To meet your requirements, pin exactly <strong>5 strategic recommendations</strong> from the list.
                 </p>
 
                 {/* Progress tracker bar */}
                 <div className="space-y-1">
-                  <div className="flex justify-between text-2xs font-semibold text-emerald-200">
+                  <div className="flex justify-between text-2xs font-semibold text-indigo-200">
                     <span>DOCUMENT INTEGRATED DRAFT PROGRESS</span>
                     <span>{selectedIds.length * 20}%</span>
                   </div>
-                  <div className="w-full bg-emerald-950 rounded-full h-1.5 overflow-hidden">
+                  <div className="w-full bg-indigo-950 rounded-full h-1.5 overflow-hidden">
                     <div 
-                      className="bg-emerald-400 h-full transition-all duration-300"
+                      className="bg-indigo-400 h-full transition-all duration-300"
                       style={{ width: `${selectedIds.length * 20}%` }}
                     ></div>
                   </div>
@@ -456,10 +456,10 @@ export default function App() {
                       type="button"
                       onClick={copyPreparedReportText}
                       disabled={selectedIds.length === 0}
-                      className="p-1.5 text-slate-500 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all title='Copy text content' disabled:opacity-50"
+                      className="p-1.5 text-slate-500 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all title='Copy text content' disabled:opacity-50"
                     >
                       {copiedNoteId === "main-report" ? (
-                        <Check className="w-4 h-4 text-emerald-600" />
+                        <Check className="w-4 h-4 text-indigo-600" />
                       ) : (
                         <Copy className="w-4 h-4" />
                       )}
@@ -490,7 +490,7 @@ export default function App() {
                     
                     {/* Seal / Emblem element */}
                     <div className="border-b-2 border-double border-slate-200 pb-4 text-center">
-                      <div className="inline-flex items-center justify-center p-1.5 bg-emerald-50 border border-emerald-100 rounded-full text-emerald-700 mb-1">
+                      <div className="inline-flex items-center justify-center p-1.5 bg-indigo-50 border border-indigo-100 rounded-full text-indigo-700 mb-1">
                         <Award className="w-5 h-5" />
                       </div>
                       <h4 className="font-display font-extrabold text-slate-800 text-xs tracking-wider uppercase">Strategic Growth Blueprint</h4>
@@ -542,7 +542,7 @@ export default function App() {
                                 <span className="font-display font-bold text-slate-700 text-4xs uppercase tracking-tight">
                                   {index + 1}. {rec.title}
                                 </span>
-                                <span className="text-5xs bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded font-semibold uppercase">
+                                <span className="text-5xs bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded font-semibold uppercase">
                                   {rec.category}
                                 </span>
                               </div>
@@ -560,7 +560,7 @@ export default function App() {
                               {customNotes[rec.id] && (
                                 <div className="mt-1 pt-1 border-t border-slate-200/50">
                                   <strong className="text-slate-700 text-5xs uppercase tracking-wider block">Internal Action Note:</strong>
-                                  <p className="text-emerald-700 italic text-4xs mt-0.5">{customNotes[rec.id]}</p>
+                                  <p className="text-indigo-700 italic text-4xs mt-0.5">{customNotes[rec.id]}</p>
                                 </div>
                               )}
                             </div>
@@ -594,13 +594,13 @@ export default function App() {
         {/* Master Printable Screen Area */}
         {profile && selectedRecommendations.length > 0 && (
           <div className="hidden print:block print-page p-8 font-sans text-sm space-y-6">
-            <div className="border-b-4 border-emerald-700 pb-4 flex justify-between items-end">
+            <div className="border-b-4 border-indigo-700 pb-4 flex justify-between items-end">
               <div>
                 <h1 className="text-xl font-bold text-slate-900 tracking-tight uppercase">STRATEGIC GROWTH DEVELOPMENT MASTERPLAN</h1>
                 <p className="text-xs text-slate-500 mt-1 uppercase tracking-widest font-semibold">Organized Framework for NGO Capacity Upgrade</p>
               </div>
               <div className="text-right">
-                <span className="inline-block bg-emerald-50 border border-emerald-100 text-emerald-800 text-xs uppercase tracking-widest px-3 py-1 font-bold rounded">
+                <span className="inline-block bg-indigo-50 border border-indigo-100 text-indigo-800 text-xs uppercase tracking-widest px-3 py-1 font-bold rounded">
                   OFFICIAL AUDIT REPORT
                 </span>
               </div>
@@ -624,7 +624,7 @@ export default function App() {
               </div>
               <div className="mt-2">
                 <span className="text-slate-400 font-bold uppercase tracking-wider block mb-1">Operating Resource Limits</span>
-                <strong className="text-slate-800 block text-emerald-700">{profile.budget}</strong>
+                <strong className="text-slate-800 block text-indigo-700">{profile.budget}</strong>
               </div>
             </div>
 
@@ -660,7 +660,7 @@ export default function App() {
                         <ul className="space-y-1">
                           {rec.actionSteps.map((step, sIdx) => (
                             <li key={sIdx} className="text-3xs text-slate-600 leading-normal flex items-start gap-1">
-                              <span className="font-bold text-emerald-600 font-display">{sIdx + 1}.</span> {step}
+                              <span className="font-bold text-indigo-600 font-display">{sIdx + 1}.</span> {step}
                             </li>
                           ))}
                         </ul>
@@ -670,7 +670,7 @@ export default function App() {
                         <ul className="space-y-1">
                           {rec.metricsToTrack.map((m, mIdx) => (
                             <li key={mIdx} className="text-3xs text-slate-600 leading-normal flex items-start gap-1">
-                              <span className="text-emerald-500 font-bold">•</span> {m}
+                              <span className="text-indigo-500 font-bold">•</span> {m}
                             </li>
                           ))}
                         </ul>
@@ -678,9 +678,9 @@ export default function App() {
                     </div>
 
                     {customNotes[rec.id] && (
-                      <div className="bg-emerald-50/40 p-2.5 rounded border border-emerald-100/60 mt-1">
-                        <span className="text-4xs font-bold tracking-wider text-emerald-800 uppercase block mb-0.5">Execution & Operational Assignment Notes:</span>
-                        <p className="text-3xs text-emerald-900 italic leading-snug">{customNotes[rec.id]}</p>
+                      <div className="bg-indigo-50/40 p-2.5 rounded border border-indigo-100/60 mt-1">
+                        <span className="text-4xs font-bold tracking-wider text-indigo-800 uppercase block mb-0.5">Execution & Operational Assignment Notes:</span>
+                        <p className="text-3xs text-indigo-900 italic leading-snug">{customNotes[rec.id]}</p>
                       </div>
                     )}
                   </div>
@@ -710,7 +710,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>© {new Date().getFullYear()} Social Organization Capacity Platform. Built to support non-profit objectives.</p>
           <div className="flex gap-4 font-semibold text-slate-500">
-            <span className="text-emerald-600">InAmigos Foundation Program</span>
+            <span className="text-indigo-600">InAmigos Foundation Program</span>
           </div>
         </div>
       </footer>

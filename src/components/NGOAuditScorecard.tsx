@@ -72,15 +72,15 @@ export default function NGOAuditScorecard() {
     if (tScore === 100) return {
       title: "Elite Operational Model",
       desc: "Outstanding operational capacity. Your organization fully leverages digital channels, transparency indicators, and quick-action volunteering avenues. Focus now on local peer mentoring.",
-      color: "text-emerald-700 bg-emerald-50 border-emerald-200",
-      indicator: "bg-emerald-500",
+      color: "text-indigo-700 bg-indigo-50/60 border-indigo-200",
+      indicator: "bg-indigo-500",
       praise: "Fully optimized structure"
     };
     if (tScore >= 60) return {
       title: "Active Structural Growth",
       desc: "Healthy baseline benchmarks established. You have robust programmatic structure but can gain massive traction by addressing mobile micro-channels and simplifying volunteer tasks.",
-      color: "text-emerald-700 bg-emerald-50 border-emerald-200",
-      indicator: "bg-emerald-500",
+      color: "text-indigo-700 bg-indigo-50/60 border-indigo-200",
+      indicator: "bg-indigo-500",
       praise: "Moderate structural capacity"
     };
     if (tScore >= 40) return {
@@ -106,7 +106,7 @@ export default function NGOAuditScorecard() {
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-100 pb-4">
         <div>
           <h2 className="font-display text-xl font-semibold text-slate-800 flex items-center gap-2">
-            <Gauge className="text-emerald-600 w-5 h-5" />
+            <Gauge className="text-indigo-600 w-5 h-5" />
             Social Readiness Diagnostic Scan
           </h2>
           <p className="text-xs text-slate-500 mt-1">
@@ -155,13 +155,13 @@ export default function NGOAuditScorecard() {
                   onClick={() => toggleCheck(q.id)}
                   className={`p-3.5 rounded-xl border transition-all cursor-pointer flex items-start gap-3.5 ${
                     isChecked
-                      ? 'border-emerald-200 bg-emerald-50/20 text-slate-800'
+                      ? 'border-indigo-200 bg-indigo-50/20 text-slate-800'
                       : 'border-slate-100 hover:border-slate-200 text-slate-600'
                   }`}
                 >
-                  <button type="button" className="flex-shrink-0 mt-0.5 text-emerald-600 outline-none">
+                  <button type="button" className="flex-shrink-0 mt-0.5 text-indigo-600 outline-none">
                     {isChecked ? (
-                      <CheckSquare className="w-5 h-5 fill-emerald-100" />
+                      <CheckSquare className="w-5 h-5 fill-indigo-100" />
                     ) : (
                       <Square className="w-5 h-5 text-slate-300" />
                     )}
@@ -190,7 +190,7 @@ export default function NGOAuditScorecard() {
                 
                 {/* Glow badge according to score */}
                 <div className={`absolute -right-2 -bottom-1 text-5xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full text-white shadow-xs ${
-                  score >= 80 ? 'bg-emerald-600' : score >= 40 ? 'bg-amber-500' : 'bg-rose-500'
+                  score >= 80 ? 'bg-indigo-600' : score >= 40 ? 'bg-amber-500' : 'bg-rose-500'
                 }`}>
                   {feedback.praise}
                 </div>
@@ -200,7 +200,7 @@ export default function NGOAuditScorecard() {
               <div className="w-full bg-slate-200/80 rounded-full h-2 overflow-hidden max-w-xs mx-auto">
                 <div
                   className={`h-full transition-all duration-300 ${
-                    score >= 80 ? 'bg-emerald-600' : score >= 40 ? 'bg-amber-500' : 'bg-rose-500'
+                    score >= 80 ? 'bg-indigo-600' : score >= 40 ? 'bg-amber-500' : 'bg-rose-500'
                   }`}
                   style={{ width: `${score}%` }}
                 ></div>
@@ -238,7 +238,7 @@ export default function NGOAuditScorecard() {
 
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-2">
             <h4 className="font-bold text-slate-800 flex items-center gap-1">
-              <span className="text-base text-emerald-500">🤝</span> Volunteering Tasks Discretization
+              <span className="text-base text-violet-500">🤝</span> Volunteering Tasks Discretization
             </h4>
             <p className="text-slate-500 leading-normal text-2xs">
               Transition busy modern support bases from general open shifts to <strong>Task Milestones</strong>. Break organizational burdens into concrete 20-minute deliverables (like copy editing, graphic cropping, database inputs) to increase volunteer turnout by up to 2.5x.

@@ -75,7 +75,7 @@ export default function NGOProfileForm({ onSubmit, isLoading }: NGOProfileFormPr
       <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
         <div>
           <h2 id="form-heading-title" className="font-display text-xl font-semibold text-slate-800 flex items-center gap-2">
-            <Building2 className="text-emerald-600 w-5 h-5" />
+            <Building2 className="text-indigo-600 w-5 h-5" />
             1. Define Your Social Organization
           </h2>
           <p className="text-sm text-slate-500 mt-1">
@@ -98,7 +98,7 @@ export default function NGOProfileForm({ onSubmit, isLoading }: NGOProfileFormPr
                 onClick={() => applyPreset(index)}
                 className={`text-xs px-2.5 py-1.5 rounded-lg border font-medium transition-all ${
                   activePreset === index
-                    ? 'bg-emerald-50 text-emerald-700 border-emerald-200 shadow-sm'
+                    ? 'bg-indigo-50 text-indigo-700 border-indigo-200 shadow-sm'
                     : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                 }`}
               >
@@ -126,7 +126,7 @@ export default function NGOProfileForm({ onSubmit, isLoading }: NGOProfileFormPr
                 placeholder="e.g. Alliance for Clean Waters"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full pl-9 pr-4 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm outline-none transition-all text-slate-800"
+                className="w-full pl-9 pr-4 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm outline-none transition-all text-slate-800"
               />
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function NGOProfileForm({ onSubmit, isLoading }: NGOProfileFormPr
                 placeholder="e.g. Wildlife Preservation, Food Security"
                 value={formData.cause}
                 onChange={handleInputChange}
-                className="w-full pl-9 pr-4 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm outline-none transition-all text-slate-800"
+                className="w-full pl-9 pr-4 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm outline-none transition-all text-slate-800"
               />
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function NGOProfileForm({ onSubmit, isLoading }: NGOProfileFormPr
                 placeholder="e.g. South District Villages, Mid-Scale Towns"
                 value={formData.region}
                 onChange={handleInputChange}
-                className="w-full pl-9 pr-4 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm outline-none transition-all text-slate-800"
+                className="w-full pl-9 pr-4 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm outline-none transition-all text-slate-800"
               />
             </div>
           </div>
@@ -180,7 +180,7 @@ export default function NGOProfileForm({ onSubmit, isLoading }: NGOProfileFormPr
               name="scale"
               value={formData.scale}
               onChange={handleInputChange}
-              className="w-full px-3 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm outline-none transition-all text-slate-800"
+              className="w-full px-3 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm outline-none transition-all text-slate-800"
             >
               <option value="Grassroots/Local">Grassroots / Local (Neighborhood)</option>
               <option value="Regional/Statewide">Regional / Statewide (Citywide)</option>
@@ -201,7 +201,7 @@ export default function NGOProfileForm({ onSubmit, isLoading }: NGOProfileFormPr
                 name="budget"
                 value={formData.budget}
                 onChange={handleInputChange}
-                className="w-full pl-9 pr-3 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm outline-none transition-all text-slate-800"
+                className="w-full pl-9 pr-3 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm outline-none transition-all text-slate-800"
               >
                 <option value="Micro (Under $15,000)">Micro (Under $15,000)</option>
                 <option value="Small ($15,000 - $60,000)">Small ($15,000 - $60,000)</option>
@@ -226,7 +226,7 @@ export default function NGOProfileForm({ onSubmit, isLoading }: NGOProfileFormPr
                 placeholder="e.g. Acquire 100 new local monthly donors"
                 value={formData.primaryGoal}
                 onChange={handleInputChange}
-                className="w-full pl-9 pr-4 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm outline-none transition-all text-slate-800"
+                className="w-full pl-9 pr-4 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm outline-none transition-all text-slate-800"
               />
             </div>
           </div>
@@ -245,7 +245,7 @@ export default function NGOProfileForm({ onSubmit, isLoading }: NGOProfileFormPr
             placeholder="e.g. Volunteers leave quickly; staff has no graphic design experience; donors drop off after recurring season..."
             value={formData.challenges}
             onChange={handleInputChange}
-            className="w-full px-4 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm outline-none transition-all text-slate-800 resize-none"
+            className="w-full px-4 py-2.5 bg-slate-50/50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm outline-none transition-all text-slate-800 resize-none"
           />
         </div>
 
@@ -255,15 +255,15 @@ export default function NGOProfileForm({ onSubmit, isLoading }: NGOProfileFormPr
             id="btn-generate-insights"
             type="submit"
             disabled={isLoading}
-            className={`w-full md:w-auto px-6 py-3 rounded-xl font-display font-semibold text-sm transition-all flex items-center justify-center gap-2 shadow-md shadow-emerald-700/10 ${
+            className={`w-full md:w-auto px-6 py-3 rounded-xl font-display font-semibold text-sm transition-all flex items-center justify-center gap-2 shadow-md shadow-indigo-700/10 ${
               isLoading
-                ? 'bg-emerald-100 text-emerald-400 cursor-not-allowed border border-emerald-200'
-                : 'bg-emerald-600 hover:bg-emerald-700 text-white hover:shadow-lg hover:shadow-emerald-700/20 cursor-pointer active:scale-98'
+                ? 'bg-indigo-100 text-indigo-400 cursor-not-allowed border border-indigo-200'
+                : 'bg-indigo-600 hover:bg-indigo-700 text-white hover:shadow-lg hover:shadow-indigo-700/20 cursor-pointer active:scale-98'
             }`}
           >
             {isLoading ? (
               <>
-                <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-emerald-600" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-indigo-600" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                 </svg>
